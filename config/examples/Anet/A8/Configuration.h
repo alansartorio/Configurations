@@ -70,7 +70,7 @@
 
 // Choose the name from boards.h that matches your setup
 #ifndef MOTHERBOARD
-  #define MOTHERBOARD BOARD_ANET_10
+  #define MOTHERBOARD BOARD_RAMPS_14_EFB
 #endif
 
 // @section serial
@@ -715,9 +715,9 @@
     #define DEFAULT_Ki_LIST {   1.25,   1.25 }
     #define DEFAULT_Kd_LIST {  86.00,  86.00 }
   #else
-    #define DEFAULT_Kp  21.00
-    #define DEFAULT_Ki   1.25
-    #define DEFAULT_Kd  86.00
+    #define DEFAULT_Kp  28.94
+    #define DEFAULT_Ki   2.24
+    #define DEFAULT_Kd  93.65
   #endif
 #else
   #define BANG_MAX 255    // Limit hotend current while in bang-bang mode; 255=full current
@@ -1305,7 +1305,7 @@
  * Override with M92 (when enabled below)
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 100 }
+#define DEFAULT_AXIS_STEPS_PER_UNIT   { 100, 100, 400, 107.1 }
 
 /**
  * Enable support for M92. Disable to save at least ~530 bytes of flash.
@@ -1914,7 +1914,7 @@
 // Travel limits (linear=mm, rotational=°) after homing, corresponding to endstop positions.
 #define X_MIN_POS -33
 #define Y_MIN_POS -10
-#define Z_MIN_POS 0
+#define Z_MIN_POS -6.4
 #define X_MAX_POS X_BED_SIZE
 #define Y_MAX_POS Y_BED_SIZE
 #define Z_MAX_POS 240
@@ -2498,8 +2498,8 @@
 // Preheat Constants - Up to 10 are supported without changes
 //
 #define PREHEAT_1_LABEL       "PLA"
-#define PREHEAT_1_TEMP_HOTEND 190
-#define PREHEAT_1_TEMP_BED     60
+#define PREHEAT_1_TEMP_HOTEND 200
+#define PREHEAT_1_TEMP_BED     70
 #define PREHEAT_1_TEMP_CHAMBER 35
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
@@ -2935,7 +2935,7 @@
  * This LCD is known to be susceptible to electrical interference which
  * scrambles the display. Press any button to clear it up.
  */
-#define ZONESTAR_LCD
+//#define ZONESTAR_LCD
 
 //
 // Generic 16x2, 16x4, 20x2, or 20x4 character-based LCD.
@@ -3038,7 +3038,7 @@
 //
 // Note: Details on connecting to the Anet V1.0 controller are in the file pins_ANET_10.h
 //
-//#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
+#define REPRAP_DISCOUNT_FULL_GRAPHIC_SMART_CONTROLLER
 
 //
 // K.3D Full Graphic Smart Controller
